@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+}
+#video1{
+    width: 200%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 1;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+}
+#video2{
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.container{
+    width: 20vw;
+    height: 10vh;
+    position: relative;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    z-index: 11;
+    /* background-color: white; */
+}
+.drag{
+   width: 5vw;
+   height:10vh;
+   border-radius: 50%;
+   /* background-color: blue; */
+   position: absolute;
+   top: 0;
+   left: 0;
+   /* border: 3px dotted #fff; */
+}
+.drag-c{
+    width: 5vw;
+   height:10vh;
+   border-radius: 50%;
+   border: 3px dotted #fff;
+    animation: rotatecir 3s linear infinite;
+}
+.cir{
+    width: 5vw;
+    height:10vh;
+    border-radius: 50%;
+    /* background-color: red; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 3px dotted red;
+}
+@keyframes rotatecir {
+    0%{
+        rotate:-360deg
+    }100%{
+        rotate:0deg;
+    }
+}
+
+ 
